@@ -20,6 +20,7 @@ code {
   background: #7f1cb7;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;

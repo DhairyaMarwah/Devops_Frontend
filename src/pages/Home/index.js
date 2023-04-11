@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Amazon from "../../assets/amazon.svg";
 import Flipkart from "../../assets/flipkart.svg";
+import BestBuy from "../../assets/bestbuy.svg";
 import Info from "../../assets/info.svg";
 import Img from "../../assets/img.png";
 
@@ -124,7 +125,14 @@ const Home = () => {
 
                     <div className="company-name">
                       <img
-                        src={result.company === "Amazon" ? Amazon : Flipkart}
+                        // src={result.company === "Amazon" ? result.company==="Flipkart"?  Flipkart:BestBuy}
+                        src={
+                          result.company === "Amazon"
+                            ? Amazon
+                            : result.company === "Flipkart"
+                            ? Flipkart
+                            : BestBuy
+                        }
                         alt="company-logo"
                       />
                       <div className="company-name-flex">
