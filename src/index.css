@@ -1,13 +1,202 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.app {
+  background: #7f1cb7;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.search-box {
+  background: #ffffff;
+  box-shadow: 0px 3.31px 19.9417px rgba(0, 0, 0, 0.07);
+  border-radius: 18.2799px;
+  padding: 21px 24px;
+  border: 4px solid #b6b6b6;
+  width: 580px;
+}
+form p,
+.search-results p {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 19.9417px;
+  letter-spacing: -0.02em;
+  color: #444e60;
+}
+.search-results p {
+  margin-bottom: 1rem;
+}
+form {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+form input {
+  width: 100%;
+  background: #f8f2fd;
+  border-radius: 9.97085px;
+  font-weight: 500;
+  font-size: 18.9417px;
+  border: none;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  padding: 9px 12px;
+  color: #6f1ba7;
+}
+form input::placeholder {
+  font-weight: 500;
+  font-size: 18.9417px;
+  border: none;
+  line-height: 30px;
+  /* identical to box height */
+
+  letter-spacing: -0.02em;
+  color: #6f1ba7;
+}
+.search-results {
+  background: #ffffff;
+  border: 4px solid #b6b6b6;
+  width: 580px;
+  padding: 31px 24px;
+  box-shadow: 0px 12.96px 38.2216px 6.64723px rgba(68, 78, 96, 0.13);
+  border-radius: 16.6181px;
+}
+.search-results img {
+  width: 80px;
+}
+.company-name {
+  display: flex;
+  gap: 2rem;
+}
+.company-name-flex {
+  /* padding-top: 10px; */
+}
+.company-name h1 {
+  font-weight: 600;
+  font-size: 23.9092px;
+  line-height: 36px;
+  letter-spacing: -0.03em;
+  color: #a03fd7;
+}
+.company-name p {
+  font-weight: 700;
+  font-size: 43.6316px;
+  line-height: 50px;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #7f1cb7;
+}
+.company {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 9px 16px;
+  border-radius: 8px;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+.company:hover {
+  background: #f8f2fd;
+}
+.companies {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.company-name-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.company-info img {
+  cursor: pointer;
+  width: 30px;
+}
+.company {
+  position: relative;
+}
+.company-info-box {
+  position: absolute;
+  background: #ffffff;
+  width: 380px;
+  box-shadow: 0px 4px 27px 3px rgba(0, 0, 0, 0.13);
+  border-radius: 16px;
+  padding: 40px;
+  z-index: 4;
+  right: -180px;
+  top: -100px;
+}
+.result-product-title {
+  color: #273f6e;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+.result-product-price {
+  color: #000;
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 4px;
+}
+.result-product-button button {
+  background: #7F1CB7;
+  color: #7F1CB7;
+  border-radius: 10px;
+  padding: 6px 42px;
+  border: none;
+  margin-top: 14px;
+}
+.result-product-button button a {
+  font-weight: 600;
+  font-size: 20.9092px;
+  line-height: 36px;
+  /* identical to box height */
+
+  letter-spacing: -0.02em;
+  border: none;
+  text-decoration: none;
+  color: #ffffff;
+}
+.close {
+  float: right;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 19.9417px;
+  letter-spacing: -0.02em;
+
+  color: #444e60;
+}
+.app > h1 {
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 56px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+.app{
+  position: relative;
+}
+.absolute-img{
+  position: absolute;bottom: -45px;right: -100px;
 }
